@@ -1,2 +1,4 @@
 # bili_guard_counter
-a simple webpage that displays guard gifts count
+可以在运行后累计赠送的上舰/舰长盲盒
+显示为 1.2/3 前者为运行后到当前上舰的总月数（盲盒天数会折算成月数），后者为前者向上取整加一
+提督为10倍，总督为100倍计算
