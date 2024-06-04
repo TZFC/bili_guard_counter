@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <script>
+        async function fetchCounter() {
+            const response = await fetch('/counter');
+            const data = await response.json();
+            const counter = data.counter;
+            const roundedCounter = Math.ceil(counter) + 1;
+            document.getElementById('counter').innerText = `${counter}/${roundedCounter}`;
+        }
+
+        function startFetchingCounter() {
+            fetchCounter();
+            setInterval(fetchCounter, 1000); // Fetch counter every second
+        }
+
+        window.onload = startFetchingCounter;
+    </script>
+</head>
+<body>
+    <h1><span id="counter">0/1</span></h1>
+</body>
+</html>
